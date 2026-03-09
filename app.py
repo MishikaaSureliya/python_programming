@@ -1,6 +1,4 @@
-# ===============================
 # VARIABLES & DATA TYPES
-# ===============================
 
 print("\n--- VARIABLES & DATA TYPES ---")
 
@@ -12,10 +10,7 @@ print("Name:", name)
 print("Age:", age)
 print("Marks:", marks)
 
-
-# ===============================
 # LIST
-# ===============================
 
 print("\n--- LIST ---")
 
@@ -26,10 +21,7 @@ print("Student List:", students)
 for s in students:
     print("Student:", s)
 
-
-# ===============================
 # TUPLE
-# ===============================
 
 print("\n--- TUPLE ---")
 
@@ -38,10 +30,7 @@ subjects = ("Math", "Physics", "CS")
 print("Subjects:", subjects)
 print("First subject:", subjects[0])
 
-
-# ===============================
 # SET
-# ===============================
 
 print("\n--- SET ---")
 
@@ -49,10 +38,7 @@ numbers = {1,2,3,3,2}
 
 print("Unique numbers:", numbers)
 
-
-# ===============================
 # DICTIONARY
-# ===============================
 
 print("\n--- DICTIONARY ---")
 
@@ -65,10 +51,7 @@ student = {
 print("Student Dictionary:", student)
 print("Student name:", student["name"])
 
-
-# ===============================
 # STRING MANIPULATION
-# ===============================
 
 print("\n--- STRING MANIPULATION ---")
 
@@ -78,10 +61,7 @@ print("Uppercase:", text.upper())
 print("Lowercase:", text.lower())
 print("Length:", len(text))
 
-
-# ===============================
 # CONDITIONAL STATEMENT
-# ===============================
 
 print("\n--- CONDITIONAL STATEMENT ---")
 
@@ -92,10 +72,7 @@ if marks >= 80:
 else:
     print("Grade B")
 
-
-# ===============================
 # LOOPS
-# ===============================
 
 print("\n--- FOR LOOP ---")
 
@@ -110,10 +87,7 @@ while i <= 3:
     print("Count:", i)
     i += 1
 
-
-# ===============================
 # FUNCTION
-# ===============================
 
 print("\n--- FUNCTION ---")
 
@@ -122,10 +96,7 @@ def greet(name):
 
 greet("Mishika")
 
-
-# ===============================
 # FILE HANDLING
-# ===============================
 
 print("\n--- FILE HANDLING ---")
 
@@ -134,10 +105,7 @@ with open("sample.txt","w") as file:
 
 print("File created and text written.")
 
-
-# ===============================
 # EXCEPTION HANDLING
-# ===============================
 
 print("\n--- EXCEPTION HANDLING ---")
 
@@ -146,10 +114,7 @@ try:
 except:
     print("Error: Cannot divide by zero")
 
-
-# ===============================
 # OBJECT ORIENTED PROGRAMMING
-# ===============================
 
 print("\n--- OBJECT ORIENTED PROGRAMMING ---")
 
@@ -167,9 +132,66 @@ s1 = Student("Mishika",92)
 s1.display()
 
 
-# ===============================
+from abc import ABC, abstractmethod
+
+# ABSTRACTION
+
+print("\n--- ABSTRACTION ---")
+
+class Person(ABC):
+
+    @abstractmethod
+    def role(self):
+        pass
+
+# INHERITANCE
+
+class Student(Person):
+
+    # ENCAPSULATION
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.__marks = marks   # private variable
+
+    def get_marks(self):
+        return self.__marks
+
+    def role(self):
+        print("I am a Student")
+
+
+class Teacher(Person):
+
+    def role(self):
+        print("I am a Teacher")
+
+# POLYMORPHISM
+
+print("\n--- POLYMORPHISM ---")
+
+people = [Student("Mishika", 92), Teacher()]
+
+for p in people:
+    p.role()
+
+# USING ENCAPSULATION METHOD
+
+print("\n--- ENCAPSULATION ---")
+
+s = Student("Mishika", 92)
+
+print("Student Name:", s.name)
+print("Student Marks:", s.get_marks())
+
+# INHERITANCE DEMONSTRATION
+
+print("\n--- INHERITANCE ---")
+
+t = Teacher()
+t.role()
+
 # NUMPY
-# ===============================
 
 print("\n--- NUMPY ARRAY ---")
 
@@ -181,9 +203,7 @@ print("Array:", arr)
 print("Mean:", np.mean(arr))
 
 
-# ===============================
 # MATRIX
-# ===============================
 
 print("\n--- MATRIX ---")
 
@@ -194,10 +214,7 @@ matrix = np.array([
 
 print(matrix)
 
-
-# ===============================
 # PANDAS DATAFRAME
-# ===============================
 
 print("\n--- PANDAS DATAFRAME ---")
 
@@ -212,10 +229,7 @@ df = pd.DataFrame(data)
 
 print(df)
 
-
-# ===============================
 # DATA FILTERING
-# ===============================
 
 print("\n--- DATA FILTERING ---")
 
@@ -224,9 +238,7 @@ high_marks = df[df["Marks"] > 80]
 print(high_marks)
 
 
-# ===============================
 # DATA VISUALIZATION
-# ===============================
 
 print("\n--- DATA VISUALIZATION (MATPLOTLIB) ---")
 
@@ -236,10 +248,7 @@ plt.bar(df["Name"], df["Marks"])
 plt.title("Student Marks")
 plt.show()
 
-
-# ===============================
 # STATISTICS
-# ===============================
 
 print("\n--- STATISTICS ---")
 
@@ -247,10 +256,7 @@ print("Mean:", np.mean(arr))
 print("Median:", np.median(arr))
 print("Standard Deviation:", np.std(arr))
 
-
-# ===============================
 # PROBABILITY
-# ===============================
 
 print("\n--- PROBABILITY ---")
 
@@ -261,10 +267,7 @@ probability = high/total_students
 
 print("Probability of marks > 80:", probability)
 
-
-# ===============================
 # GRADIENT DESCENT CONCEPT
-# ===============================
 
 print("\n--- GRADIENT DESCENT ---")
 
